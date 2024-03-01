@@ -1,0 +1,23 @@
+{
+  "name": "patterns-vuejs",
+  "version": "1.0.0",
+  "description": "Desafio para Data Stone",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laercio-nogueira/patterns-vuejs.git"
+  },
+  "author": "Laercio Carlos Nogueira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/laercio-nogueira/patterns-vuejs/issues"
+  },
+  "homepage": "https://github.com/laercio-nogueira/patterns-vuejs#readme",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": "=18.10.0",
+    "npm": "=8.19.2"
+  }
+}
