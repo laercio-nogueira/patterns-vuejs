@@ -2,6 +2,7 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const resolve = (relativePath) => path.resolve(__dirname, relativePath);
 
@@ -10,12 +11,14 @@ module.exports = {
   optimization: {
     moduleIds: 'named',
   },
-  entry: {},
+  entry: {
+    entry: resolve('./src/app.js'),
+  },
   output: {
     filename: 'js/[name].[hash].bundle.js',
     chunkFilename: 'js/[name].[hash].chunk.js',
-    path: resolve('./public/assets/project'),
-    publicPath: '/assets/project/',
+    path: resolve('./public/'),
+    publicPath: '/assets/',
   },
   module: {
     rules: [
@@ -60,7 +63,7 @@ module.exports = {
         type: 'asset',
         generator: {
           outputPath: 'images/',
-          publicPath: '/assets/project/images/',
+          publicPath: '/assets//images/',
         },
       },
       {
@@ -81,12 +84,14 @@ module.exports = {
     new CleanWebpackPlugin({
       cleanAfterEveryBuildPatterns: ['!fonts/*.**'],
     }),
+    new HtmlWebpackPlugin(),
   ],
   resolve: {
     alias: {
       vue$: 'vue/dist/vue.runtime.min.js',
       '#deprecated': resolve('../src/main'),
       '#': resolve('../src/main'),
+      '#components': resolve('./src/main/components'),
     },
     extensions: ['.vue', '.js', '.ts'],
   },
