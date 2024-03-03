@@ -89,13 +89,15 @@ module.exports = {
     new CleanWebpackPlugin({
       cleanAfterEveryBuildPatterns: ['!fonts/*.**'],
     }),
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: "Teste Desenvolvimento"
+    }),
   ],
   resolve: {
     alias: {
       vue$: 'vue/dist/vue.runtime.min.js',
-      '#deprecated': resolve('../src/main'),
-      '#': resolve('../src/main'),
+      '#deprecated': resolve('./src/main'),
+      '#': resolve('./src/main'),
       '#components': resolve('./src/main/components'),
     },
     extensions: ['.vue', '.js', '.ts'],
