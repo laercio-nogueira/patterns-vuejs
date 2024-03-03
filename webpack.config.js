@@ -58,6 +58,7 @@ module.exports = {
             options: {
               additionalData: `
                 @import './src/main/stylesheet/theme.scss';
+                @import './src/main/stylesheet/main.scss';
               `,
             },
           },
