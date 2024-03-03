@@ -34,6 +34,7 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
+  font-family: $font-default;
 
   & label {
     color: $color-primary;

@@ -24,6 +24,7 @@ export default {
 <style scoped lang="scss">
 button {
   background-color: $background-primary;
+  font-family: $font-default;
   color: $color-white;
   border: 0;
   padding: 0.5rem 1rem;
