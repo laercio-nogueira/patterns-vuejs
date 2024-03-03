@@ -62,7 +62,6 @@
       @click="() => alert('Enviado!')"
     />
   </div>
-</div>
 </template>
 
 <script>

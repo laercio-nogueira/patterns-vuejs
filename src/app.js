@@ -9,7 +9,7 @@ import './main/stylesheet/font-awesome.css'
 Vue.use(VueRouter);
 const router = new VueRouter(manageRouters);
 
-const vm = new Vue({
+new Vue({
   render: (h) => h(App),
   router,
 }).$mount('body');
