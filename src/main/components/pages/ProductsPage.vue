@@ -13,18 +13,14 @@
     />
 
     <Heading5Atom text="Ativo" />
-    <CheckBoxGenericAtom
+    <ToggleSwitchAtom
       textLabel="sim"
       value="sim"
       @change="(value) => console.log(value)"
       checked
+      class="mb-3"
     />
 
-    <CheckBoxGenericAtom
-      textLabel="não"
-      value="nao"
-      @change="(value) => console.log(value)"
-    />
     <br/>
     <ButtonGenericAtom
       buttonText="Enviar"
@@ -36,7 +32,7 @@
 <script>
 import ButtonGenericAtom from '../atoms/ButtonGenericAtom'
 import InputGenericAtom from '../atoms/InputGenericAtom'
-import CheckBoxGenericAtom  from '../atoms/CheckBoxGenericAtom'
+import ToggleSwitchAtom  from '../atoms/ToggleSwitchAtom'
 import Heading1Atom from '../atoms/Heading1Atom'
 import Heading5Atom from '../atoms/Heading5Atom'
 
@@ -45,7 +41,7 @@ export default {
   components: {
     ButtonGenericAtom,
     InputGenericAtom,
-    CheckBoxGenericAtom,
+    ToggleSwitchAtom,
     Heading1Atom,
     Heading5Atom
   }
