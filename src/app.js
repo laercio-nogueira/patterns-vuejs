@@ -1,8 +1,13 @@
 import Vue from 'vue';
-import 'bootstrap/dist/css/bootstrap.css'
+import VueRouter from 'vue-router';
+import 'bootstrap/dist/css/bootstrap-grid.min.css'
 import HomePage from '#components/pages/HomePage.vue';
+import manageRouters from '#/router/manageRouters';
 
-// eslint-disable-next-line vue/require-name-property
-const vm = new Vue({ // eslint-disable-line no-new
+Vue.use(VueRouter);
+const router = new VueRouter(manageRouters);
+
+const vm = new Vue({
   render: (h) => h(HomePage),
+  router,
 }).$mount('body');

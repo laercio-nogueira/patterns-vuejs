@@ -20,7 +20,8 @@
   "homepage": "https://github.com/laercio-nogueira/patterns-vuejs#readme",
   "dependencies": {
     "http-server": "^14.1.1",
-    "vue": "^2.7.14"
+    "vue": "^2.7.14",
+    "vue-router": "^3.6.5"
   },
   "devDependencies": {
     "@babel/core": "^7.24.0",
