@@ -1,6 +1,11 @@
 export default {
   routes: [
     {
+      name: 'Principal',
+      path: '/',
+      component: () => import('../components/pages/HomePage.vue'),
+    },
+    {
       name: 'ProductsPage',
       path: '/products',
       component: () => import('../components/pages/ProductsPage.vue'),
