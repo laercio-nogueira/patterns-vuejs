@@ -34,6 +34,6 @@ export default {
   float: right;
   width: calc(100% - 235px);
   height: 100vh;
-  background: #eee;
+  background: #eef1f5;
 }
 </style>
