@@ -1,29 +1,16 @@
 <template>
   <div>
-    <HeaderGenericAtom logo="Sistema XYZ"/>
-    <MenuSidebar />
-
-    <div class="page-content">
-      <div class="container mt-1">
-        <div class="row">
-          <div class="col-12">
-            <router-view/>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Heading1Atom text="Home page" />
   </div>
 </template>
 
 <script>
-import HeaderGenericAtom from '../atoms/HeaderGenericAtom'
-import MenuSidebar from '../molecules/MenuSidebar'
+import Heading1Atom from '#components/atoms/Heading1Atom'
 
 export default {
   name: 'HomePage',
   components: {
-    HeaderGenericAtom,
-    MenuSidebar
+    Heading1Atom
   }
 }
 </script>
