@@ -12,7 +12,7 @@
 import ItemMenuAtom from '../atoms/ItemMenuAtom'
 
 export default {
-  name: 'MenuSidebar',
+  name: 'MenuSidebarMolecule',
   components: {
     ItemMenuAtom
   }

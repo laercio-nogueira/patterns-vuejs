@@ -1,7 +1,7 @@
 <template>
   <div>
     <HeaderGenericAtom logo="Sistema XYZ"/>
-    <MenuSidebar />
+    <MenuSidebarMolecule />
 
     <div class="page-content">
       <div class="container mt-3">
@@ -17,13 +17,13 @@
 
 <script>
 import HeaderGenericAtom from '#components/atoms/HeaderGenericAtom'
-import MenuSidebar from '#components/molecules/MenuSidebar'
+import MenuSidebarMolecule from '#components/molecules/MenuSidebarMolecule'
 
 export default {
   name: 'HomePage',
   components: {
     HeaderGenericAtom,
-    MenuSidebar
+    MenuSidebarMolecule
   }
 }
 </script>
