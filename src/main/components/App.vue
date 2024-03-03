@@ -33,5 +33,7 @@ export default {
   display: flex;
   float: right;
   width: calc(100% - 235px);
+  height: 100vh;
+  background: #eee;
 }
 </style>
