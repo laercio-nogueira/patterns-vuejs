@@ -23,10 +23,9 @@ export default {
 <style scoped lang="scss">
 /* Customize the label (the container) */
 .checkbox__control {
-  display: block;
+  display: inline-flex;
   position: relative;
   padding-left: 35px;
-  margin-bottom: 12px;
   cursor: pointer;
   font-size: 18px;
   -webkit-user-select: none;
@@ -34,12 +33,12 @@ export default {
   -ms-user-select: none;
   user-select: none;
   font-family: $font-default;
+  height: 40px;
 
   & input {
-    position: absolute;
     opacity: 0;
     cursor: pointer;
-    height: 0;
+    height: 10px;
     width: 0;
   }
 
@@ -50,6 +49,8 @@ export default {
     height: 25px;
     width: 25px;
     background-color: #eee;
+    border: 1px solid #ddd;
+  
 
     &:after {
       content: "";

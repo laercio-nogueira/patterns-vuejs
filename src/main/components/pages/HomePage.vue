@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="card">
     <Heading1Atom text="Home page" />
   </div>
 </template>
