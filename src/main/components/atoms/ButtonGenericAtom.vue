@@ -24,20 +24,15 @@ export default {
 <style scoped lang="scss">
 button {
   background-color: $background-primary;
-  color: $color-primary;
+  color: $color-white;
   border: 0;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
+  width: 100%;
   cursor: pointer;
   &:disabled {
     cursor: not-allowed;
     opacity: 0.5;
   }
-
-  // font-size: 1.2rem;
-  // background-color: #055b9b;
-  // color: #fff;
-  // border-radius: 6px;
-  // border: 0px;
 }
 </style>
