@@ -55,6 +55,11 @@ module.exports = {
           },
           {
             loader: 'sass-loader',
+            options: {
+              additionalData: `
+                @import './src/main/stylesheet/theme.scss';
+              `,
+            },
           },
         ],
       },
