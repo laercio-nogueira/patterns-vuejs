@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1> Produtos </h1>
+    <Heading1Atom text="Produtos" class="mb-4"/>
     <InputGenericAtom
       textLabel="Produto"
       type="text" 
@@ -30,7 +30,7 @@
       @click="() => alert('Enviado!')"
     />
 
-    
+
   </div>
 </template>
 
@@ -38,13 +38,15 @@
 import ButtonGenericAtom from '../atoms/ButtonGenericAtom'
 import InputGenericAtom from '../atoms/InputGenericAtom'
 import CheckBoxGenericAtom  from '../atoms/CheckBoxGenericAtom'
+import Heading1Atom from '../atoms/Heading1Atom'
 
 export default {
   name: 'ProductsPage',
   components: {
     ButtonGenericAtom,
     InputGenericAtom,
-    CheckBoxGenericAtom
+    CheckBoxGenericAtom,
+    Heading1,
   }
 }
 </script>
