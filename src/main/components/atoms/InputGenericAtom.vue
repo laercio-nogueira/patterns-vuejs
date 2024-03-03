@@ -1,14 +1,15 @@
 <template>
 <div class="form__input">
   <label :for="inputName">{{ textLabel }}</label>
-  <input 
+  <input
     :type="type" 
     :name="inputName" 
     :placeholder="placeholder" 
     :required="required"
     :value="value"
     @input="$emit('input', $event.target.value)"
-  >
+    v-mask="mask"
+  />
 </div>
 </template>
 
@@ -24,7 +25,8 @@ export default {
     required: {
       type: Boolean,
       default: false
-    }
+    },
+    mask: String
   }
 }
 </script>

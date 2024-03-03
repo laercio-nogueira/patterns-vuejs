@@ -7,8 +7,8 @@
       name="nome" 
       placeholder="Preencha o nome" 
       required
-      value=""
-      @input="(value) => console.log(value)"
+      :value="name"
+      @input="(value) => name = value"
       class="mb-3"
     />
     <InputGenericAtom
@@ -17,9 +17,10 @@
       name="documento" 
       placeholder="Preencha o documento" 
       required
-      value=""
-      @input="(value) => console.log(value)"
+      :value="document"
+      @input="(value) => document = value"
       class="mb-3"
+      mask="###.###.###-##"
     />
     <InputGenericAtom
       textLabel="Telefone"
@@ -27,9 +28,10 @@
       name="telefone" 
       placeholder="Preencha o telefone" 
       required
-      value=""
-      @input="(value) => console.log(value)"
+      :value="phone"
+      @input="(value) => phone = value"
       class="mb-3"
+      mask='(##) #####-####'
     />
     <InputGenericAtom
       textLabel="Email"
@@ -37,15 +39,15 @@
       name="email" 
       placeholder="Preencha o email" 
       required
-      value=""
-      @input="(value) => console.log(value)"
+      :value="email"
+      @input="(value) => email = value"
       class="mb-3"
     />
     
     <Heading5Atom text="Ativo" />
     <ToggleSwitchAtom
-      @change="(value) => console.log(value)"
-      checked
+      @change="(value) => status = value"
+      :checked="status"
       class="mb-3"
     />
 
@@ -71,6 +73,13 @@ export default {
     ToggleSwitchAtom,
     Heading1Atom,
     Heading5Atom
-  }
+  },
+  data: () => ({
+    name: '',
+    status: true,
+    document: '',
+    phone: '',
+    email: ''
+  })
 }
 </script>

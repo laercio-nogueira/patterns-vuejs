@@ -7,17 +7,15 @@
       name="produto" 
       placeholder="Preencha o nome do produto" 
       required
-      value=""
-      @input="(value) => console.log(value)"
+      :value="product"
+      @input="(value) => product = value"
       class="mb-3"
     />
 
     <Heading5Atom text="Ativo" />
     <ToggleSwitchAtom
-      textLabel="sim"
-      value="sim"
-      @change="(value) => console.log(value)"
-      checked
+      @change="(value) => status = value"
+      :checked="status"
       class="mb-3"
     />
 
@@ -44,6 +42,10 @@ export default {
     ToggleSwitchAtom,
     Heading1Atom,
     Heading5Atom
-  }
+  },
+  data: () => ({
+    product: '',
+    status: true,
+  })
 }
 </script>
