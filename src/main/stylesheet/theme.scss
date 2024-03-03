@@ -1,15 +1,5 @@
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/maps";
-@import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/utilities";
-@import "~bootstrap/scss/helpers";
-@import "~bootstrap/scss/utilities/api";
-@import '~bootstrap/scss/_grid.scss';
-
-
 $color-white: #ffffff;
 $color-primary: #07448f;
-$color-gray: #666;
+$color-gray: #ccc;
 $background-primary: #055b9b;
-$font-default-light: 'robotolight';
+$font-default: 'Roboto', sans-serif;

@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import 'bootstrap/dist/css/bootstrap.css'
 import HomePage from '#components/pages/HomePage.vue';
 
 // eslint-disable-next-line vue/require-name-property
