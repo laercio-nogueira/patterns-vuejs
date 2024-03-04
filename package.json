@@ -4,9 +4,9 @@
   "description": "Desafio para Data Stone",
   "main": "index.js",
   "scripts": {
-    "prod": "http-server -c-1",
+    "prod": "npm run build && http-server -c-1",
     "build": "webpack --env NODE_ENV=production",
-    "build-watch": "npm run build -- --watch",
+    "build-watch": "webpack --watch",
     "pre-push": "npm run build && npm run test && npm run lint",
     "prepare": "husky install && husky add .husky/pre-push \"npm run pre-push\"",
     "lint": "node_modules/.bin/eslint 'src/main/**/*.js' 'src/main/**/*.vue' 'src/spec/**/*.spec.js'",
