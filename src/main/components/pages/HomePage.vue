@@ -86,6 +86,11 @@ export default {
       this.clientId = id
     },
     setProduct() {
+      const isExists = this.getClientsById[0]?.products.find(product => product.id === this.productId);
+      if (isExists) {
+        this.EventEmitter.$emit('openAlert', { message: 'Este produto ja foi vinculado!', type: 'danger' })
+        return
+      }
       this.linkProduct({ clientId: this.clientId, productId: this.productId })
       this.EventEmitter.$emit('openAlert', { message: 'Produto vinculado com sucesso!', type: 'success' })
     }
