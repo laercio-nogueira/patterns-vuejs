@@ -1,5 +1,6 @@
 <template>
-  <div class="card">
+<div>
+  <div class="card mb-3">
     <Heading1Atom text="Produtos" class="mb-4"/>
     <InputGenericAtom
       textLabel="Produto"
@@ -22,17 +23,28 @@
     <br/>
     <ButtonGenericAtom
       buttonText="Enviar"
-      @click="() => alert('Enviado!')"
+      @click="setProduct"
+      width="100px"
     />
   </div>
+
+  <div class="card">
+    <ListDataAtom 
+      :legends="[ 'Produto', 'Ativo' ]"
+      :items="getProducts"
+    />
+  </div>
+</div>
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 import ButtonGenericAtom from '../atoms/ButtonGenericAtom'
 import InputGenericAtom from '../atoms/InputGenericAtom'
 import ToggleSwitchAtom  from '../atoms/ToggleSwitchAtom'
 import Heading1Atom from '../atoms/Heading1Atom'
 import Heading5Atom from '../atoms/Heading5Atom'
+import ListDataAtom from '../atoms/ListDataAtom'
 
 export default {
   name: 'ProductsPage',
@@ -41,7 +53,23 @@ export default {
     InputGenericAtom,
     ToggleSwitchAtom,
     Heading1Atom,
-    Heading5Atom
+    Heading5Atom,
+    ListDataAtom,
+  },
+  computed: {
+    ...mapGetters('products', ['getProducts']),
+  },
+  methods: {
+    ...mapActions('products', ['addProduct']),
+    setProduct() {
+      this.addProduct({ 
+        Produto: this.product, 
+        Ativo: this.status 
+      })
+
+      this.product = ''
+      this.status = true
+    }
   },
   data: () => ({
     product: '',
