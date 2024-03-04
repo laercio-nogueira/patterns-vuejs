@@ -3,6 +3,8 @@
     type="submit" 
     :disabled="disabled"
     @click="$emit('click')"
+    :style="{ 'width': width, 'float': float}"
+    class="btn btn-primary"
   >
     {{ buttonText }}
   </button>
@@ -16,7 +18,11 @@ export default {
     disabled: {
       type: Boolean,
       default: false
-    }
+    },
+    width: {
+      type: String,
+      default: '100%'
+    },
   }
 }
 </script>
@@ -29,7 +35,6 @@ button {
   border: 0;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  width: 100%;
   cursor: pointer;
   &:disabled {
     cursor: not-allowed;
