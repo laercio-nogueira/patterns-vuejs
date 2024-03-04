@@ -77,6 +77,7 @@ export default {
 
       this.product = ''
       this.status = true
+      this.EventEmitter.$emit('openAlert', { message:'Produto cadastrado com sucesso!', type: 'success' })
     }
   }
 }

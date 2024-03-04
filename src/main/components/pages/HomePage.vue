@@ -29,7 +29,7 @@
       />
       <ButtonGenericAtom 
         buttonText="Vincular" 
-        @click="linkProduct({ clientId, productId })"
+        @click="setProduct"
         :disabled="isDisabled"
       />
 
@@ -85,6 +85,10 @@ export default {
       this.open = true,
       this.clientId = index
     },
+    setProduct() {
+      this.linkProduct({ clientId: this.clientId, productId: this.productId })
+      this.EventEmitter.$emit('openAlert', { message: 'Produto vinculado com sucesso!', type: 'success' })
+    }
   }
 }
 </script>

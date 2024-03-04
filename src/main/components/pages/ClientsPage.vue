@@ -107,6 +107,8 @@ export default {
       this.phone = ''
       this.email = ''
       this.status = true
+
+      this.EventEmitter.$emit('openAlert', { message: 'Cliente Cadastrado com sucesso!', type: 'success' })
     }
   }
 }
