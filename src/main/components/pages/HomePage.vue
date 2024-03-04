@@ -12,6 +12,28 @@
     />
 
     <SliderAtom showClose :open="open" @close="open = false">
+    <template v-slot:header>
+        <Heading1Atom text="Vincular produtos" />
+      </template>
+      
+      <ListDataAtom 
+        :legends="['Name', 'Documento']"
+        :items="getClientsById"
+      />
+      <Heading5Atom text="Produtos" />
+      <SelectGenericAtom 
+        :items="getProducts" 
+        field="Produto"
+        @input="(id) => productId = id"
+        class="mb-3"
+      />
+      <ButtonGenericAtom buttonText="Vincular" @click="linkProduct({ clientId, productId })" />
+
+      <hr />
+      <ListDataAtom 
+        :legends="[{ value: 'Produto', text: 'Produtos Vinculados' }]"
+        :items="getClientsById[0]?.products"
+      />
     </SliderAtom>
   </div>
 </template>
@@ -20,6 +42,10 @@
 import { mapGetters, mapActions } from 'vuex'
 import Heading1Atom from '#components/atoms/Heading1Atom'
 import ListDataAtom from '#components/atoms/ListDataAtom'
+import SliderAtom from '#components/atoms/SliderAtom'
+import Heading5Atom from '#components/atoms/Heading5Atom'
+import SelectGenericAtom from '#components/atoms/SelectGenericAtom'
+import ButtonGenericAtom from '#components/atoms/ButtonGenericAtom'
 
 export default {
   name: 'HomePage',
@@ -27,6 +53,12 @@ export default {
     Heading1Atom,
     ListDataAtom,
     SliderAtom,
+    Heading1Atom,
+    Heading5Atom,
+    ListDataAtom,
+    SliderAtom,
+    SelectGenericAtom,
+    ButtonGenericAtom
   },
   data: () => ({
     open: false,
@@ -34,10 +66,14 @@ export default {
     productId: ''
   }),
   computed: {
-    ...mapGetters('clients', ['getClients'])
+    ...mapGetters('clients', ['getClients']),
+    ...mapGetters('products', ['getProducts']),
+    getClientsById() {
+      return this.getClients.filter(item => item.id === this.clientId)
+    },
   },
   methods: {
-    ...mapActions('clients', ['removeClient']),
+    ...mapActions('clients', ['removeClient', 'linkProduct']),
     selectClient(index) {
       this.open = true,
       this.clientId = index
