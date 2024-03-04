@@ -1,9 +1,9 @@
 <template>
 <div class="menu-sidebar">
   <ul class="menu-sidebar__menu">
-    <ItemMenuAtom page="/" textItem="PRINCIPAL" icon="check-square-o"/>
-    <ItemMenuAtom page="/products" textItem="PRODUTOS" icon="check-square-o"/>
-    <ItemMenuAtom page="/clients" textItem="CLIENTES" icon="check-square-o"/>
+    <ItemMenuAtom page="/" textItem="Principal" icon="check-square-o"/>
+    <ItemMenuAtom page="/products" textItem="Produtos" icon="check-square-o"/>
+    <ItemMenuAtom page="/clients" textItem="Clientes" icon="check-square-o"/>
   </ul>
 </div>
 </template>
