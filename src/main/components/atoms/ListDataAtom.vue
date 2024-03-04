@@ -2,14 +2,14 @@
   <table class="table table-striped table-bordered">
     <thead>
       <tr>
-        <th v-for="(legend, index) in legends" :key="index">{{legend}}</th>
+        <th v-for="(legend, index) in legends" :key="index">{{ legend.text || legend }}</th>
         <th v-if="link"></th>
         <th v-if="remove"></th>
       </tr>
     </thead>
     <tbody>
       <tr v-for="(item, index) in items" :key="index">
-        <td v-for="(legend, index) in legends" :key="index">{{ item[legend] }}</td>
+        <td v-for="(legend, index) in legends" :key="index">{{ item[legend.value || legend] }}</td>
         <td v-if="link" class="text-center">
           <a class="table__icon-link" @click="$emit('link', item.id)">
             <i class="fa fa-link" />
