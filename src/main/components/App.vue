@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeaderGenericAtom logo="Sistema XYZ"/>
+    <HeaderGenericAtom logo="Sistema Data Stone"/>
     <MenuSidebarMolecule />
 
     <div class="page-content">
