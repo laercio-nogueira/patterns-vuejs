@@ -1,8 +1,7 @@
 import VuexPersistence from 'vuex-persist';
-import localForage from 'localforage';
 
 const vuexLocal = new VuexPersistence({
-  storage: localForage,
+  storage: window.localStorage,
   asyncStorage: true,
 });
 
