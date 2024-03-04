@@ -51,7 +51,8 @@ export default {
     padding: rem(10px);
     border-radius: rem(6px);
     outline: none;
-    border-color: $color-gray;
+    border-style: solid;
+    border-color: $color-gray-medium;
     border-width: rem(1px)
   }
 }

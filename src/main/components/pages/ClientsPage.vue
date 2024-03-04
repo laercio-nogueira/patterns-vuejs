@@ -54,6 +54,7 @@
     <ButtonGenericAtom
       buttonText="Enviar"
       @click="setClient"
+      width="100px"
     />
 
   </div>
