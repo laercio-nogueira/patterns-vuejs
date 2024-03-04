@@ -8,6 +8,7 @@ $color-gray-dark: #555;
 
 $background-primary: #055b9b;
 $font-default: 'Roboto', sans-serif;
+$color-red: #e7505a;
 
 @function rem($size) {
   $rem-size: $size / 16px;
