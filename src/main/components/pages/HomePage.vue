@@ -27,7 +27,11 @@
         @input="(id) => productId = id"
         class="mb-3"
       />
-      <ButtonGenericAtom buttonText="Vincular" @click="linkProduct({ clientId, productId })" />
+      <ButtonGenericAtom 
+        buttonText="Vincular" 
+        @click="linkProduct({ clientId, productId })"
+        :disabled="isDisabled"
+      />
 
       <hr />
       <ListDataAtom 
@@ -71,6 +75,9 @@ export default {
     getClientsById() {
       return this.getClients.filter(item => item.id === this.clientId)
     },
+    isDisabled() {
+      return this.productId === ''
+    }
   },
   methods: {
     ...mapActions('clients', ['removeClient', 'linkProduct']),

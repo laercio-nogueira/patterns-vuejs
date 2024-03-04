@@ -25,6 +25,7 @@
       buttonText="Enviar"
       @click="setProduct"
       width="100px"
+      :disabled="isDisabled"
     />
   </div>
 
@@ -56,8 +57,15 @@ export default {
     Heading5Atom,
     ListDataAtom,
   },
+  data: () => ({
+    product: '',
+    status: true,
+  }),
   computed: {
     ...mapGetters('products', ['getProducts']),
+    isDisabled() {
+      return this.product === '' || this.product.length < 2
+    }
   },
   methods: {
     ...mapActions('products', ['addProduct']),
@@ -70,10 +78,6 @@ export default {
       this.product = ''
       this.status = true
     }
-  },
-  data: () => ({
-    product: '',
-    status: true,
-  })
+  }
 }
 </script>

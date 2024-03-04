@@ -55,6 +55,7 @@
       buttonText="Enviar"
       @click="setClient"
       width="100px"
+      :disabled="isDisabled"
     />
 
   </div>
@@ -84,6 +85,12 @@ export default {
     phone: '',
     email: ''
   }),
+  computed: {
+    isDisabled() {
+      const regexEmail = /^[\w+.]+@\w+\.\w{2,}(?:\.\w{2})?$/
+      return this.name === '' || this.document.length < 14 || this.phone.length < 15 || !regexEmail.test(this.email)
+    }
+  },
   methods: {
     ...mapActions('clients', ['addClient']),
     setClient() {
