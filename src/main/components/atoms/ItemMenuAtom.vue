@@ -23,11 +23,11 @@ export default {
 
   &__nav-item {
     color: #555;
-    background: $color-gray-light;
-    border-bottom: rem(1px) solid $color-gray-medium;
+    background: $color-grey-light;
+    border-bottom: rem(1px) solid $color-grey-medium;
 
     &:hover {
-      background: $color-gray;
+      background: $color-grey;
     }
   }
 
@@ -40,7 +40,7 @@ export default {
     font-size: rem(14px);
     font-weight: 300;
     cursor: pointer;
-    color: $color-gray-dark;
+    color: $color-grey-dark;
     font-family: $font-default;
 
     & span {

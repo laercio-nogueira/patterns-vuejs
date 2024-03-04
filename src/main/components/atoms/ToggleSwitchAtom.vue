@@ -48,7 +48,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $color-gray-medium;
+  background-color: $color-grey-medium;
   -webkit-transition: .4s;
   transition: .4s;
 

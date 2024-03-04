@@ -52,7 +52,7 @@ export default {
     border-radius: rem(6px);
     outline: none;
     border-style: solid;
-    border-color: $color-gray-medium;
+    border-color: $color-grey-medium;
     border-width: rem(1px)
   }
 }
