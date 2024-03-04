@@ -14,6 +14,7 @@ Vue.use(VueTheMask);
 
 const router = new VueRouter(manageRouters);
 const store = new Vuex.Store(createStore)
+Vue.prototype.EventEmitter = new Vue()
 
 new Vue({
   render: (h) => h(App),
