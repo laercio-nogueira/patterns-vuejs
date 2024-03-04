@@ -11,12 +11,12 @@
       <tr v-for="(item, index) in items" :key="index">
         <td v-for="(legend, index) in legends" :key="index">{{ item[legend] }}</td>
         <td v-if="link" class="text-center">
-          <a class="table__icon-link" @click="$emit('link', index)">
+          <a class="table__icon-link" @click="$emit('link', item.id)">
             <i class="fa fa-link" />
           </a>
         </td>
         <td v-if="remove" class="text-center">
-          <a class="table__icon-delete" @click="$emit('remove', index)">
+          <a class="table__icon-delete" @click="$emit('remove', item.id)">
             <i class="fa fa-trash" />
           </a>
         </td>
