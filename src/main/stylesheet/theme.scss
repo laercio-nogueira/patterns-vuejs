@@ -1,13 +1,22 @@
-$color-white: #ffffff;
-$color-primary: #07448f;
-
-$color-gray-light: #FBFCFB;
-$color-gray: #f2f2f2;
-$color-gray-medium: #ccc;
-$color-gray-dark: #555;
-
-$background-primary: #055b9b;
 $font-default: 'Roboto', sans-serif;
+$font-default-regular: 'Roboto', sans-serif;
+$font-size-default: 16px;
+$animation-duration: .5s;
+
+$color-primary: #07448f;
+$background-primary: #055b9b;
+
+$color-white: #ffffff;
+$color-grey-light: #FBFCFB;
+$color-grey: #f2f2f2;
+$color-grey-medium: #ccc;
+$color-grey-dark: #555;
+$color-grey-13: #333;
+$color-grey-20: #444;
+$color-grey-60: #999;
+$color-grey-80: #ccc;
+$color-grey-100: #eee;
+$color-black: #000;
 $color-red: #e7505a;
 
 @function rem($size) {
