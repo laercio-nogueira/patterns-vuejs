@@ -20,7 +20,7 @@
         >
           <i
             v-if="showClose"
-            class="fa fa-close"
+            class="fa fa-close icon-close"
             aria-label="Close slider"
             data-test-slider-close-button
             @click.self="$emit('close')"
