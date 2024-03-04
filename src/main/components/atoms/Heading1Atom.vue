@@ -15,7 +15,7 @@ export default {
 .heading1 {
   font-size: rem(28px);
   font-weight: bold;
-  color: #555;
+  color: $color-gray-dark;
   margin: 0;
   padding: 0;
   text-align: left;

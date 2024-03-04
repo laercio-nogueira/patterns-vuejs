@@ -23,7 +23,7 @@ export default {
 
 <style scoped lang="scss">
 button {
-  background-color: $background-primary;
+  background-color: $color-primary;
   font-family: $font-default;
   color: $color-white;
   border: 0;

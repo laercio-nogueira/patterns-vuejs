@@ -14,7 +14,7 @@ export default {
 <style scoped lang="scss">
 .heading5 {
   font-size: rem(16px);
-  color: #07448f;
+  color: $color-primary;
   margin: rem(2px) 0px;
   padding: 0;
   line-height: rem(20px);
