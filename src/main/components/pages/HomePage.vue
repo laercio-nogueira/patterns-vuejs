@@ -7,34 +7,41 @@
       :items="getClients"
       remove
       link
-      @link="linkProducts"
+      @link="selectClient"
       @remove="removeClient"
     />
+
+    <SliderAtom showClose :open="open" @close="open = false">
+    </SliderAtom>
   </div>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import Heading1Atom from '#components/atoms/Heading1Atom'
-import ListDataAtom from '../atoms/ListDataAtom'
+import ListDataAtom from '#components/atoms/ListDataAtom'
 
 export default {
   name: 'HomePage',
   components: {
     Heading1Atom,
-    ListDataAtom
+    ListDataAtom,
+    SliderAtom,
   },
+  data: () => ({
+    open: false,
+    clientId: '',
+    productId: ''
+  }),
   computed: {
     ...mapGetters('clients', ['getClients'])
   },
   methods: {
     ...mapActions('clients', ['removeClient']),
-    deleteClient(index) {
-      this.removeClient(index)
+    selectClient(index) {
+      this.open = true,
+      this.clientId = index
     },
-    linkProducts(index) {
-      console.log(index)
-    }
   }
 }
 </script>
