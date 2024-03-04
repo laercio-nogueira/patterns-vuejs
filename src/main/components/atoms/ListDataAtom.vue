@@ -7,8 +7,8 @@
         <th v-if="remove"></th>
       </tr>
     </thead>
-    <tbody>
-      <tr v-for="(item, index) in items" :key="index">
+    <tbody v-if="items.length > 0">
+      <tr  v-for="(item, index) in items" :key="index" >
         <td v-for="(legend, index) in legends" :key="index">{{ item[legend.value || legend] }}</td>
         <td v-if="link" class="text-center">
           <a class="table__icon-link" @click="$emit('link', item.id)">
@@ -22,6 +22,11 @@
         </td>
       </tr>
     </tbody>
+    <tbody v-else>
+      <tr>
+        <td :colspan="totalColSpan" class="text-center">Ainda não possui dados</td>
+      </tr>
+    </tbody>
   </table>
 </template>
 
@@ -33,6 +38,11 @@ export default {
     link: Boolean,
     remove: Boolean
   },
+  computed: {
+    totalColSpan() {
+      return this.legends.length + (this.link ? 1 : 0) + (this.remove ? 1 : 0)
+    }
+  }
 };
 </script>
 
