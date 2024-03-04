@@ -69,14 +69,16 @@ export default {
   },
   methods: {
     ...mapActions('products', ['addProduct']),
+    resetForm() {
+      this.product = ''
+      this.status = true
+    },
     setProduct() {
       this.addProduct({ 
         Produto: this.product, 
         Ativo: this.status 
       })
-
-      this.product = ''
-      this.status = true
+      this.resetForm()
       this.EventEmitter.$emit('openAlert', { message:'Produto cadastrado com sucesso!', type: 'success' })
     }
   }

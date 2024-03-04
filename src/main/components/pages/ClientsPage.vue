@@ -93,6 +93,13 @@ export default {
   },
   methods: {
     ...mapActions('clients', ['addClient']),
+    resetForm() {
+      this.name = ''
+      this.document = ''
+      this.phone = ''
+      this.email = ''
+      this.status = true
+    },
     setClient() {
       this.addClient({
         Name: this.name,
@@ -101,13 +108,7 @@ export default {
         Email: this.email,
         Ativo: this.status
       })
-
-      this.name = ''
-      this.document = ''
-      this.phone = ''
-      this.email = ''
-      this.status = true
-
+      this.resetForm()
       this.EventEmitter.$emit('openAlert', { message: 'Cliente Cadastrado com sucesso!', type: 'success' })
     }
   }

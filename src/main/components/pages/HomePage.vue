@@ -12,7 +12,7 @@
     />
 
     <SliderAtom showClose :open="open" @close="open = false">
-    <template v-slot:header>
+      <template v-slot:header>
         <Heading1Atom text="Vincular produtos" />
       </template>
       
@@ -81,9 +81,9 @@ export default {
   },
   methods: {
     ...mapActions('clients', ['removeClient', 'linkProduct']),
-    selectClient(index) {
+    selectClient(id) {
       this.open = true,
-      this.clientId = index
+      this.clientId = id
     },
     setProduct() {
       this.linkProduct({ clientId: this.clientId, productId: this.productId })
