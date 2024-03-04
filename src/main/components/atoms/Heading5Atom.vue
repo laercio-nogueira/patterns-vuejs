@@ -13,11 +13,11 @@ export default {
 
 <style scoped lang="scss">
 .heading5 {
-  font-size: 16px;
+  font-size: rem(16px);
   color: #07448f;
-  margin: 2px 0px;
+  margin: rem(2px) 0px;
   padding: 0;
-  line-height: 20px;
+  line-height: rem(20px);
   font-family: $font-default;
 }
 </style>

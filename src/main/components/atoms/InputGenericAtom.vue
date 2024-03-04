@@ -42,17 +42,17 @@ export default {
     color: $color-primary;
     font-size: 1rem;
     font-weight: 500;
-    margin-bottom: 3px;
-    letter-spacing: 0.5px;
+    margin-bottom: rem(3px);
+    letter-spacing: rem(0.5px);
   }
 
   & input {
     font-size: 1rem;
-    padding: 10px;
-    border-radius: 6px;
+    padding: rem(10px);
+    border-radius: rem(6px);
     outline: none;
     border-color: $color-gray;
-    border-width: 1px
+    border-width: rem(1px)
   }
 }
 </style>

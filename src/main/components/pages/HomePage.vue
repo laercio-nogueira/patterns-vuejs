@@ -19,6 +19,6 @@ export default {
 .page-content {
   display: flex;
   float: right;
-  width: calc(100% - 235px);
+  width: calc(100% - rem(235px));
 }
 </style>

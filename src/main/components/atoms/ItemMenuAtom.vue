@@ -24,7 +24,7 @@ export default {
   &__nav-item {
     color: #555;
     background: #FBFCFB;
-    border-bottom: 1px solid #ddd;
+    border-bottom: rem(1px) solid #ddd;
 
     &:hover {
       background: #f1f1f1;
@@ -35,14 +35,16 @@ export default {
     display: block;
     margin: 0;
     border: 0;
-    padding: 10px 15px;
+    padding: rem(10px) rem(15px);
     text-decoration: none;
-    font-size: 14px;
+    font-size: rem(14px);
     font-weight: 300;
     cursor: pointer;
+    background: #FBFCFB;
+    color: #444;
 
     & span {
-      margin-left: 10px
+      margin-left: rem(10px)
     }
   }
 }

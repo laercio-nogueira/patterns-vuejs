@@ -24,19 +24,19 @@ export default {
     margin: 0;
     border: 0;
     padding: 0;
-    height: 46px;
-    min-height: 46px;
+    height: rem(46px);
+    min-height: rem(46px);
     filter: none;
     background-image: none;
 
     &__logo {
       color: $color-white;
       font-family: $font-default;
-      font-size: 20px;
-      margin-left: 20px;
+      font-size: rem(20px);
+      margin-left: rem(20px);
       vertical-align: middle;
-      line-height: 46px;
-      text-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+      line-height: rem(46px);
+      text-shadow: rem(5px) rem(5px) rem(5px) rgba(0,0,0,0.3);
     }
 }
 </style>

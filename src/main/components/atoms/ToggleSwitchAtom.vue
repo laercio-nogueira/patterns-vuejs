@@ -21,8 +21,8 @@ export default {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: rem(60px);
+  height: rem(34px);
 
   & input {
     opacity: 0;
@@ -55,17 +55,17 @@ export default {
   &:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    height: rem(26px);
+    width: rem(26px);
+    left: rem(4px);
+    bottom: rem(4px);
     background-color: $color-white;
     -webkit-transition: .4s;
     transition: .4s;
   }
 
   &.round {
-    border-radius: 34px;
+    border-radius: rem(34px);
 
     &:before {
       border-radius: 50%;

@@ -4,3 +4,8 @@ $color-primary: #07448f;
 $color-gray: #ccc;
 $background-primary: #055b9b;
 $font-default: 'Roboto', sans-serif;
+
+@function rem($size) {
+  $rem-size: $size / 16px;
+  @return #{$rem-size}rem;
+}
