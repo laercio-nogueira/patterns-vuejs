@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'bootstrap/dist/css/bootstrap-grid.min.css';
+@import 'bootstrap/dist/css/bootstrap.min.css';
 @import '../stylesheet/font-awesome.css';
 @import '../stylesheet/main.scss';
 
