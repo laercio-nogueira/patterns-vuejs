@@ -5,12 +5,16 @@
     <ListDataAtom 
       :legends="['Name', 'Documento', 'Telefone', 'Email', 'Ativo']"
       :items="getClients"
+      remove
+      link
+      @link="linkProducts"
+      @remove="removeClient"
     />
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import Heading1Atom from '#components/atoms/Heading1Atom'
 import ListDataAtom from '../atoms/ListDataAtom'
 
@@ -22,6 +26,15 @@ export default {
   },
   computed: {
     ...mapGetters('clients', ['getClients'])
+  },
+  methods: {
+    ...mapActions('clients', ['removeClient']),
+    deleteClient(index) {
+      this.removeClient(index)
+    },
+    linkProducts(index) {
+      console.log(index)
+    }
   }
 }
 </script>

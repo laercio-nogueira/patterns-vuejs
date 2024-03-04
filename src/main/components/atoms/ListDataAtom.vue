@@ -3,11 +3,23 @@
     <thead>
       <tr>
         <th v-for="(legend, index) in legends" :key="index">{{legend}}</th>
+        <th v-if="link"></th>
+        <th v-if="remove"></th>
       </tr>
     </thead>
     <tbody>
       <tr v-for="(item, index) in items" :key="index">
         <td v-for="(legend, index) in legends" :key="index">{{ item[legend] }}</td>
+        <td v-if="link" class="text-center">
+          <a class="table__icon-link" @click="$emit('link', index)">
+            <i class="fa fa-link" />
+          </a>
+        </td>
+        <td v-if="remove" class="text-center">
+          <a class="table__icon-delete" @click="$emit('remove', index)">
+            <i class="fa fa-trash" />
+          </a>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -17,7 +29,9 @@
 export default {
   props: {
     legends: Array,
-    items: Array
+    items: Array,
+    link: Boolean,
+    remove: Boolean
   },
 };
 </script>
@@ -26,6 +40,18 @@ export default {
 .table {
   th, td {
     font-family: $font-default;
+  }
+
+  &__icon-link, &__icon-delete {
+    cursor: pointer;
+  }
+
+  &__icon-link, {
+    color: $color-primary;
+  }
+
+  &__icon-delete {
+    color: $color-red;
   }
 }
 </style>
