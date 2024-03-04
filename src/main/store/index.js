@@ -1,15 +1,15 @@
 import clients from './modules/clients.store';
 import products from './modules/products.store';
 import relationships from './modules/relationships.store';
-import persistenceDataPlugin from './plugins/persistenceData.plugin';
+import VuexPersistence from 'vuex-persist'
 
-const createStores = () => ({
+const store = {
   modules: {
     clients,
     products,
     relationships
   },
-  plugins: [persistenceDataPlugin],
-});
+  plugins: [new VuexPersistence().plugin]
+};
 
-export default createStores;
+export default store;
