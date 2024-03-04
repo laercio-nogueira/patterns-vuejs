@@ -28,7 +28,11 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
+@import 'bootstrap/dist/css/bootstrap-grid.min.css';
+@import '../stylesheet/font-awesome.css';
+@import '../stylesheet/main.scss';
+
 .page-content {
   display: flex;
   float: right;
