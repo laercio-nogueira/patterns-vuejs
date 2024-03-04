@@ -41,6 +41,7 @@ export default {
     font-weight: 300;
     cursor: pointer;
     color: $color-gray-dark;
+    font-family: $font-default;
 
     & span {
       margin-left: rem(10px)

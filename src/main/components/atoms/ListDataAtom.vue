@@ -23,3 +23,11 @@ export default {
   },
 };
 </script>
+
+<style scoped lang="scss">
+.table {
+  th, td {
+    font-family: $font-default;
+  }
+}
+</style>
