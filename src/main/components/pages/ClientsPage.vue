@@ -53,12 +53,14 @@
 
     <ButtonGenericAtom
       buttonText="Enviar"
-      @click="() => alert('Enviado!')"
+      @click="setClient"
     />
+
   </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import ButtonGenericAtom from '../atoms/ButtonGenericAtom'
 import InputGenericAtom from '../atoms/InputGenericAtom'
 import ToggleSwitchAtom  from '../atoms/ToggleSwitchAtom'
@@ -80,6 +82,18 @@ export default {
     document: '',
     phone: '',
     email: ''
-  })
+  }),
+  methods: {
+    ...mapActions('clients', ['addClient']),
+    setClient() {
+      this.addClient({
+        Name: this.name,
+        Documento: this.document,
+        Telefone: this.phone,
+        Email: this.email,
+        Ativo: this.status
+      })
+    }
+  }
 }
 </script>
