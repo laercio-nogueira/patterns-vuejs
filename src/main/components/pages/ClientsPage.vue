@@ -93,6 +93,12 @@ export default {
         Email: this.email,
         Ativo: this.status
       })
+
+      this.name = ''
+      this.document = ''
+      this.phone = ''
+      this.email = ''
+      this.status = true
     }
   }
 }
