@@ -62,7 +62,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 import ButtonGenericAtom from '../atoms/ButtonGenericAtom'
 import InputGenericAtom from '../atoms/InputGenericAtom'
 import ToggleSwitchAtom  from '../atoms/ToggleSwitchAtom'
@@ -86,6 +86,7 @@ export default {
     email: ''
   }),
   computed: {
+    ...mapGetters('clients', ['getClients']),
     isDisabled() {
       const regexEmail = /^[\w+.]+@\w+\.\w{2,}(?:\.\w{2})?$/
       return this.name === '' || this.document.length < 14 || this.phone.length < 15 || !regexEmail.test(this.email)
@@ -101,6 +102,12 @@ export default {
       this.status = true
     },
     setClient() {
+      const isExists = this.getClients.find(product => product.Documento === this.document);
+      if (isExists) {
+        this.EventEmitter.$emit('openAlert', { message: 'Este documento já existe!', type: 'danger' })
+        return
+      }
+
       this.addClient({
         Name: this.name,
         Documento: this.document,

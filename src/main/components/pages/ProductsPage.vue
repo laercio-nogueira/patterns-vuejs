@@ -74,6 +74,12 @@ export default {
       this.status = true
     },
     setProduct() {
+      const isExists = this.getProducts.find(product => product.Produto === this.product);
+      if (isExists) {
+        this.EventEmitter.$emit('openAlert', { message: 'Produto ja existe!', type: 'danger' })
+        return
+      }
+
       this.addProduct({ 
         Produto: this.product, 
         Ativo: this.status 
