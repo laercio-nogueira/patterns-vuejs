@@ -1,5 +1,7 @@
 <template>
   <div>
+    <AlertGenericAtom />
+
     <HeaderGenericAtom logo="Sistema Data Stone"/>
     <MenuSidebarMolecule />
 
@@ -18,13 +20,15 @@
 <script>
 import HeaderGenericAtom from '#components/atoms/HeaderGenericAtom'
 import MenuSidebarMolecule from '#components/molecules/MenuSidebarMolecule'
+import AlertGenericAtom from '#components/atoms/AlertGenericAtom'
 
 export default {
   name: 'HomePage',
   components: {
     HeaderGenericAtom,
-    MenuSidebarMolecule
-  }
+    MenuSidebarMolecule,
+    AlertGenericAtom
+  },
 }
 </script>
 
