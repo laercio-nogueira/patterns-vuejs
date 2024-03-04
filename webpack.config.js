@@ -90,7 +90,7 @@ module.exports = {
       cleanAfterEveryBuildPatterns: ['!fonts/*.**'],
     }),
     new HtmlWebpackPlugin({
-      title: "Teste Desenvolvimento"
+      title: "Data Stone"
     }),
   ],
   resolve: {
