@@ -7,6 +7,7 @@ module.exports = {
     '^@/(.*)$': '<rootDir>/src/spec/$1',
     '#/(.*)$': '<rootDir>/src/main/$1',
     '#deprecated/(.*)$': '<rootDir>/src/main/$1',
+    '#components/(.*)$': '<rootDir>/src/main/components/$1',
   },
   testPathIgnorePatterns: [
     '<rootDir>/client/node_modules/',
