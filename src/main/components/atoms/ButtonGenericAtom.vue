@@ -3,7 +3,7 @@
     type="submit" 
     :disabled="disabled"
     @click="$emit('click')"
-    :style="{ 'width': width, 'float': float}"
+    :style="{ 'width': width }"
     class="btn btn-primary"
   >
     {{ buttonText }}
