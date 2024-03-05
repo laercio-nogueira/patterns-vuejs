@@ -42,4 +42,4 @@ Para criar a estrutura do projeto, utilizei o padrao de clean-archteture para es
 Para desenvolvimento dos components, utilizei o padrão [Atomic Design](https://medium.com/pretux/atomic-design-o-que-%C3%A9-como-surgiu-e-sua-import%C3%A2ncia-para-a-cria%C3%A7%C3%A3o-do-design-system-e3ac7b5aca2c), utilizando em partes atom, molecule e pages, deixando de lado a parte de organismo e template, por ser um projeto bem pequeno.
 
 ### Webpack e Http-Server
-Para buildar o projeto, utilizei o webpack 5.82.0, configurando atraves do arquivo webpack.config.js, buildado para a pasta public na raiz e usando o template index.html para poder criar uma tag html <div id="app"></div> para usar no vue.
+Para buildar o projeto, utilizei o webpack 5.82.0, configurando atraves do arquivo webpack.config.js, buildado para a pasta public na raiz e usando o template index.html para poder criar uma tag html ```<div id="app"></div>``` para usar no vue.
