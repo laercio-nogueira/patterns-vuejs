@@ -3,11 +3,9 @@
     <div
       v-if="open"
       class="transition-wrapper"
-      data-test-slider-container
     >
       <div
         class="slider-backdrop"
-        data-test-slider-backdrop
         @click.self="$emit('close')"
       />
       <div
@@ -70,7 +68,6 @@
     },
 
     methods: {
-
       scrollHandler(event) {
         this.showOverlay = event.target.scrollTop > 0;
       },
