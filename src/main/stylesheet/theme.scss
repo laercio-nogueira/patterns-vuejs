@@ -20,6 +20,6 @@ $color-black: #000;
 $color-red: #e7505a;
 
 @function rem($size) {
-  $rem-size: $size / 16px;
+  $rem-size:  calc($size / 16px);
   @return #{$rem-size}rem;
 }
