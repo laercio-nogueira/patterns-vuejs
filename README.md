@@ -43,3 +43,7 @@ Para desenvolvimento dos components, utilizei o padrão [Atomic Design](https://
 
 ### Webpack e Http-Server
 Para buildar o projeto, utilizei o webpack 5.82.0, configurando atraves do arquivo webpack.config.js, buildado para a pasta public na raiz e usando o template index.html para poder criar uma tag html ```<div id="app"></div>``` para usar no vue.
+
+### Teste Unitário
+![image](https://github.com/laercio-nogueira/patterns-vuejs/assets/14927246/a3199f75-f1cb-4a30-9d21-1bdfb70de7af)
+
