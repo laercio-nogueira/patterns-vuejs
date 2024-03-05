@@ -51,6 +51,9 @@ O sistema nao utiliza banco de dados, então, os dados sao persistidos atraves d
 ### Conventional Commit
 Todos os commits, seguem um padrao estipulado pelo [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/#specification)
 
+### Mascara de campo
+Os campos que possuem validaçao de formato, como document e telefone, usam a tecnologia de mascara, preenchendo ponto, traço e parenteses automaticamente, pois foi configurado o vue-the-mask, para auxiliar o preenchimento dos mesmos
+
 ### Teste Unitário
 ![image](https://github.com/laercio-nogueira/patterns-vuejs/assets/14927246/a3199f75-f1cb-4a30-9d21-1bdfb70de7af)
 
@@ -76,4 +79,24 @@ Tela de cadastro de clientes
 
 ![image](https://github.com/laercio-nogueira/patterns-vuejs/assets/14927246/dc99d09c-3c1a-4019-b794-196150f3898e)
 
+## Validação
+Validações necessarias, para ativar os botoes no formulario ou para nao duplicar registro
 
+### Clientes
+
+- Campo cliente deve contem pelo menos 2 digitos
+- Campo documento, deve ser um cpf de 11 digitos, separado com a mascara ###.###.###-##
+- Campo telefone, deve conter de 11 digitos (DDD + Telefone), separado com a mascara (##) #####-####
+- Campo email, deve conter @, um texto antes e um texto depois do @ e 1 ponto
+- Documento não pode conter já cadastrado.
+
+### Produtos
+
+- Campo Produto deve conter pelo menos 2 digitos
+
+### Vincular produto ao cliente
+
+- Campo deve conter alguma escolha.
+- Produto nao pode ja ter sido vinculado ao mesmo cliente.
+
+  
