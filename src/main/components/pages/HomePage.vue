@@ -18,7 +18,7 @@
       
       <ListDataAtom 
         :legends="['Name', 'Documento']"
-        :items="getClientsById"
+        :items="[getClientsById]"
       />
       <Heading5Atom text="Produtos" />
       <SelectGenericAtom 
@@ -36,7 +36,7 @@
       <hr />
       <ListDataAtom 
         :legends="[{ value: 'Produto', text: 'Produtos Vinculados' }]"
-        :items="getClientsById[0]?.products"
+        :items="getClientsById.products"
       />
     </SliderAtom>
   </div>
@@ -73,7 +73,7 @@ export default {
     ...mapGetters('clients', ['getClients']),
     ...mapGetters('products', ['getProducts']),
     getClientsById() {
-      return this.getClients.filter(item => item.id === this.clientId)
+      return this.getClients.find(item => item.id === this.clientId) || { products: [] }
     },
     isDisabled() {
       return this.productId === ''
@@ -86,7 +86,7 @@ export default {
       this.clientId = id
     },
     setProduct() {
-      const isExists = this.getClientsById[0]?.products.find(product => product.id === this.productId);
+      const isExists = this.getClientsById?.products.find(product => product.id === this.productId);
       if (isExists) {
         this.EventEmitter.$emit('openAlert', { message: 'Este produto ja foi vinculado!', type: 'danger' })
         return
