@@ -19,6 +19,7 @@ $ npm run build-watch
 ```console
 $ npm run prod
 ````
+Abra o link: ```http://127.0.0.1:8081```
 
 ## Pacotes Externos
 
@@ -32,7 +33,7 @@ $ npm run prod
 - [Husky](https://typicode.github.io/husky/) - Husky aprimora seus commits e envia mensagens, codifica e executa testes automaticamente ao commitar.
 - [Webpack](https://webpack.js.org/)  - Um empacotador de módulo estático para aplicativos JavaScript modernos.
 
-## Designs Patterns
+## Instruçoes do projeto
 
 ### SCSS e BEM
 Foi utilizado em praticamente todo o codigo, a estrutura de scss com copilador sass, com a estrutura de classes seguindo o padrao BEM (Bloco, Elemento e Modificador)
@@ -44,6 +45,35 @@ Para desenvolvimento dos components, utilizei o padrão [Atomic Design](https://
 ### Webpack e Http-Server
 Para buildar o projeto, utilizei o webpack 5.82.0, configurando atraves do arquivo webpack.config.js, buildado para a pasta public na raiz e usando o template index.html para poder criar uma tag html ```<div id="app"></div>``` para usar no vue.
 
+### Persistencia de dados no localStore
+O sistema nao utiliza banco de dados, então, os dados sao persistidos atraves do vuex-persist, que persiste os dados cadastrados no localstore, atraves do vuex
+
+### Conventional Commit
+Todos os commits, seguem um padrao estipulado pelo [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/#specification)
+
 ### Teste Unitário
 ![image](https://github.com/laercio-nogueira/patterns-vuejs/assets/14927246/a3199f75-f1cb-4a30-9d21-1bdfb70de7af)
+
+## Telas
+
+#### Tela Principal
+Tela de entrada, onde é visualizado os clientes cadastrados, permitindo excluir, ou vincular os produtos com o cliente
+
+![image](https://github.com/laercio-nogueira/patterns-vuejs/assets/14927246/7cba4178-0814-4793-b4f1-8572fee3d6a0)
+
+#### Tela Principal - Modal
+Tela de entrada, quando voce clica no botão vincular produto, abre o modal e permite o cliente vincular um produto
+
+![image](https://github.com/laercio-nogueira/patterns-vuejs/assets/14927246/b9ccf24d-c78d-4860-a9fd-ad8675ae9b1c)
+
+#### Cadastrar Produtos
+Tela de cadastro e exibição de produtos
+
+![image](https://github.com/laercio-nogueira/patterns-vuejs/assets/14927246/c64fb66b-1766-4f77-88eb-7a1fd208edb8)
+
+#### Cadastrar Clientes
+Tela de cadastro de clientes
+
+![image](https://github.com/laercio-nogueira/patterns-vuejs/assets/14927246/dc99d09c-3c1a-4019-b794-196150f3898e)
+
 
