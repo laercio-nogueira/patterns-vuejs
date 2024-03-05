@@ -1,5 +1,5 @@
 <template>
-<div class="page-header navbar navbar-fixed-top">
+<div class="page-header navbar position-fixed">
   <div class="page-header-inner">
     <div class="page-header__logo">
       {{ logo }}
@@ -25,9 +25,8 @@ export default {
     border: 0;
     padding: 0;
     height: rem(46px);
-    min-height: rem(46px);
-    filter: none;
     background-image: none;
+    z-index: 10;
 
     &__logo {
       color: $color-white;

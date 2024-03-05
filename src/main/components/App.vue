@@ -38,10 +38,8 @@ export default {
 @import '../stylesheet/main.scss';
 
 .page-content {
-  display: flex;
   float: right;
   width: calc(100% - 235px);
-  height: 100vh;
-  background: #eef1f5;
+  margin-top: rem(50px);
 }
 </style>

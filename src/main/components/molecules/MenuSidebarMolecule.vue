@@ -1,5 +1,5 @@
 <template>
-<div class="menu-sidebar">
+<div class="menu-sidebar position-fixed">
   <ul class="menu-sidebar__menu">
     <ItemMenuAtom page="/" textItem="Principal" icon="check-square-o"/>
     <ItemMenuAtom page="/products" textItem="Produtos" icon="check-square-o"/>
@@ -23,8 +23,10 @@ export default {
 .menu-sidebar {
   background: #FBFCFB;
   width: 235px;
-  height: 100vh;
   float: left;
+  min-height: 100vh;
+  top: 46px;
+  z-index: -3;
 
   &__menu {
     margin: 0;
