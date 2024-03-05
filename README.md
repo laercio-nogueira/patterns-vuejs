@@ -33,7 +33,7 @@ Abra o link: ```http://127.0.0.1:8081```
 - [Husky](https://typicode.github.io/husky/) - Husky aprimora seus commits e envia mensagens, codifica e executa testes automaticamente ao commitar.
 - [Webpack](https://webpack.js.org/)  - Um empacotador de módulo estático para aplicativos JavaScript modernos.
 
-## Instruçoes do projeto
+## Instruções do projeto
 
 ### SCSS e BEM
 Foi utilizado em praticamente todo o codigo, a estrutura de scss com copilador sass, com a estrutura de classes seguindo o padrao BEM (Bloco, Elemento e Modificador)
