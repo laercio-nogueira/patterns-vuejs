@@ -55,7 +55,8 @@ Todos os commits, seguem um padrao estipulado pelo [conventional commit](https:/
 Os campos que possuem validaçao de formato, como document e telefone, usam a tecnologia de mascara, preenchendo ponto, traço e parenteses automaticamente, pois foi configurado o vue-the-mask, para auxiliar o preenchimento dos mesmos
 
 ### Teste Unitário
-![image](https://github.com/laercio-nogueira/patterns-vuejs/assets/14927246/a3199f75-f1cb-4a30-9d21-1bdfb70de7af)
+![image](https://github.com/laercio-nogueira/patterns-vuejs/assets/14927246/88a830e1-2673-47fc-b504-15a8243b1207)
+
 
 ## Telas
 
